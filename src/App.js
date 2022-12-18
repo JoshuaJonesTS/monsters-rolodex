@@ -9,7 +9,7 @@ class App extends Component {
 
     // 'this' refers to an instance of the class, like in Java
     this.state = {
-      name: 'Joshua',
+      name: {firstName: 'Joshua', lastName: 'Jones'},
       company: 'Tailored Software'
     }
   }
@@ -22,7 +22,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             {/* curly braces tell React to access a JavaScript variable */}
-            Hello {this.state.name}, I work at {this.state.company}
+            Hello {this.state.name.firstName} {this.state.name.lastName}, I work at {this.state.company}
           </p>
           <button onClick={() => {
             // setState changes the object
