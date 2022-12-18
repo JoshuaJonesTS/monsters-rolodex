@@ -34,9 +34,6 @@ class App extends Component {
               return {
                 name: {firstName: 'Michelangelo', lastName: 'Simoni'}
               }
-            },
-            () => {
-              console.log(this.state);
             })
           }}>
             Change Name
