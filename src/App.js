@@ -23,7 +23,7 @@ class App extends Component {
             {/* curly braces tell React to access a JavaScript variable */}
             Hello {this.state.name}
           </p>
-          <button>
+          <button onClick={}>
             Change Name
           </button>
         </header>
