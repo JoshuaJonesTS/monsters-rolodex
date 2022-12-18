@@ -20,7 +20,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Hello Joshua
+            Hello {this.state.name}
           </p>
           <button>
             Change Name
