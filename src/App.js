@@ -5,6 +5,10 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
+
+    this.state = {
+      name: 'Joshua'
+    }
   }
 
   // tell React the code to be rendered
