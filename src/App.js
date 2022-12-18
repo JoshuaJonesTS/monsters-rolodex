@@ -29,10 +29,14 @@ class App extends Component {
             // ...therefore, setState in React is similar to setters in Java
             // it is best practice to pass the same type of data type to setState
             // ...so if name is a string pass a string; if object, pass object
+            // it is most ideal to pass a function to setState
             this.setState(() => {
               return {
                 name: {firstName: 'Michelangelo', lastName: 'Simoni'}
               }
+            },
+            () => {
+              console.log(this.state);
             })
           }}>
             Change Name
