@@ -4,7 +4,7 @@ import './App.css';
 
 class App extends Component {
   constructor() {
-    
+    super();
   }
 
   // tell React the code to be rendered
