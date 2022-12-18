@@ -3,9 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  // constructor instantiates the class, like in Java
   constructor() {
     super();
 
+    // 'this' refers to an instance of the class, like in Java
     this.state = {
       name: 'Joshua'
     }
