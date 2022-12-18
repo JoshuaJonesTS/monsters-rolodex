@@ -24,6 +24,8 @@ class App extends Component {
             Hello {this.state.name}
           </p>
           <button onClick={() => {
+            // setState changes the value of a variable
+            // ...therefore, setState in React is the equivalent to setters in Java
             this.setState({name: 'Leonardo'})
           }}>
             Change Name
