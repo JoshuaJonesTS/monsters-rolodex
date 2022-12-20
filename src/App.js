@@ -36,7 +36,7 @@ class App extends Component {
       <div className="App">
         {
           this.state.monsters.map((monster) => {
-            return <h1 key={monster.id}>{monster.name}</h1>
+            return <h1 key={monster.id}>{monster.name}</h1> // the key is a unique identifier
           })
         }
       </div>
