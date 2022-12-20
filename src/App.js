@@ -9,8 +9,15 @@ class App extends Component {
 
     // 'this' refers to an instance of the class, like in Java
     this.state = {
-      name: {firstName: 'Joshua', lastName: 'Jones'},
-      company: 'Tailored Software'
+      monster1: {
+        name: 'Linda'
+      },
+      monster2: {
+        name: 'Frank'
+      },
+      monster3: {
+        name: 'Jacky'
+      }
     }
   }
 
