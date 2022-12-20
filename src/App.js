@@ -17,7 +17,7 @@ class App extends Component {
   // make API request the moment component get places onto the DOM
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => console.log(response));
+      .then(response => response.json());
   }
 
   // tell React the code to be rendered
