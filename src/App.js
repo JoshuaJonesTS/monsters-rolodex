@@ -11,6 +11,11 @@ class App extends Component {
     this.state = {
       monsters: []
     }
+
+    // life cycle method
+    componentDidMount() {
+
+    }
   }
 
   // tell React the code to be rendered
