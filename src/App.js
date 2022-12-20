@@ -13,8 +13,9 @@ class App extends Component {
     }
 
     // life cycle method
+    // make API request the moment component get places onto the DOM
     componentDidMount() {
-
+      fetch('https://jsonplaceholder.typicode.com/users')
     }
   }
 
