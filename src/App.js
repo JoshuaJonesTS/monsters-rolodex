@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -19,12 +19,12 @@ class App extends Component {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
       .then((users) => 
-        this.stateState(
+        this.setState(
           () => {
             return { monsters: users }; // monsters points to user
           },
           () => {
-            console.log(this.state)
+            console.log('state:' + this.state)
           }
         ));
   }
