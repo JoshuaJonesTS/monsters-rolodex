@@ -17,31 +17,15 @@ class App extends Component {
   // tell React the code to be rendered
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            {/* curly braces tell React to access a JavaScript variable */}
-            Hello {this.state.name.firstName} {this.state.name.lastName}, I work at {this.state.company}
-          </p>
-          <button onClick={() => {
-            // setState changes the object
-            // ...therefore, setState in React is similar to setters in Java
-            // it is best practice to pass the same type of data type to setState
-            // ...so if name is a string pass a string; if object, pass object
-            // it is most ideal to pass a function to setState
-            this.setState(() => {
-              return {
-                name: {firstName: 'Michelangelo', lastName: 'Simoni'}
-              }
-            })
-          }}>
-            Change Name
-          </button>
-        </header>
-      </div>
+      <div className="App"></div>
     );
   }
 }
 
 export default App;
+
+ // setState changes the object
+// ...therefore, setState in React is similar to setters in Java
+// it is best practice to pass the same type of data type to setState
+// ...so if name is a string pass a string; if object, pass object
+// it is most ideal to pass a function to setState
