@@ -11,12 +11,12 @@ class App extends Component {
     this.state = {
       monsters: []
     }
+  }
 
-    // life cycle method
-    // make API request the moment component get places onto the DOM
-    componentDidMount() {
-      fetch('https://jsonplaceholder.typicode.com/users')
-    }
+  // life cycle method
+  // make API request the moment component get places onto the DOM
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users');
   }
 
   // tell React the code to be rendered
