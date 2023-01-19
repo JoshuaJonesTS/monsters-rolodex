@@ -42,7 +42,7 @@ class App extends Component {
 
   // tell React the code to be rendered
   render() {
-    const { monsters, searchField } = this.state;
+    const { /*monsters,*/ searchField } = this.state;
     const { onSearchChange } = this;
     
     const filteredMonsters = this.state.monsters.filter((monster) => {
