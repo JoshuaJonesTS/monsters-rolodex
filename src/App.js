@@ -6,20 +6,30 @@ import './App.css';
 const App = () => {
   const [searchField, setSearchField] = useState(''); // useState gives an array [value, setValue]
   const [monsters, setMonsters] = useState([]);
-  
-  fetch('https://jsonplaceholder.typicode.com/users')
-    .then((response) => response.json())
-    .then((users) => setMonsters(users));
+  const [filteredMonsters, setFilteredMonsters] = useState(monsters);
+
+  // callback is the effect we want to happen 
+  // the second array contains different dependancies
+  // empty dependancy (array) tells React that nothing should change
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then((response) => response.json())
+      .then((users) => setMonsters(users));
+  }, []);
+
+  useEffect(() => {
+    const newFilteredMonsters = monsters.filter((monster) => {
+      return monster.name.toLocaleLowerCase().includes(searchField);
+    });
+
+    setFilteredMonsters(newFilteredMonsters);
+  }, [monsters, searchField]);
   
   const onSearchChange = (event) => {
-    const searchFieldString = event.target.value.toLocalLowerCase();
+    const searchFieldString = event.target.value.toLocaleLowerCase();
     setSearchField(searchFieldString);
   }
 
-  const filteredMonsters = monsters.filter((monster) => {
-    return monster.name.toLocaleLowerCase().includes(searchField);
-  })
-  
   return (
     <div className="App">
       <h1 className='app-title'>Monsters Rolodex</h1>
