@@ -6,7 +6,7 @@ import './App.css';
 const App = () => {
   const [searchField, setSearchField] = useState(''); // useState gives an array [value, setValue]
   
-  const onSearchChange = () => {
+  const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLocalLowerCase();
     setSearchField(searchFieldString);
   }
